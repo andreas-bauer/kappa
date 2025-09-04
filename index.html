@@ -51,14 +51,14 @@
         <p>
           Modern software systems tend to be large and complex, evolving rapidly
           to the point where a single developer cannot oversee all aspects of
-          the software or fully understand the implications of every change.
+          the software, or fully understand the implications of every change.
           Thus, the development of modern software systems requires extensive
           collaboration among professionals with diverse technical skills and
-          domain knowledge to manage the increasing complexity of developed
-          systems. Consequently, industry and open-source projects adopted code
-          reviews to facilitate collaboration as informal and asynchronous
-          discussions about changes and their potential impacts before they are
-          merged into the codebase. Code reviews offer several benefits,
+          domain knowledge to manage the increasing complexity of the developed
+          systems. 
+          One way that both industry and open-source projects facilitate collaboration is through code reviews.
+          In code reviews, people discuss changes to artifacts before they are integrated into the codebase.
+          Code reviews offer several benefits,
           including improving code quality by identifying bugs, highlighting sub
           par solutions, technical dept, and suggesting alternative approaches.
           Additionally, code reviews facilitate knowledge sharing among
@@ -72,22 +72,22 @@
           through its visual interface, simulating real-world user interaction.
           By interacting with the GUI, GUI-based testing enables the assessment
           of both the visual appearance and functional correctness of the system
-          under test (SOOT). In industry, GUI-based testing is performed
-          manually and as automated tests. We specifically focus on automated
-          GUI-based testing, where test cases are written as scripts (code)
-          along with supporting artifacts that enable automation. This focus is
-          motivated by the fact that code-based test scripts closely resemble
-          production code, which is the typical subject of code review
-          practices.
+          under test (SUT). In industry, GUI-based testing is performed manually
+          and as automated tests. We specifically focus on automated GUI-based
+          testing, where test cases are written as scripts (code) along with
+          supporting artifacts that enable automation. This focus is motivated
+          by the fact that code-based test scripts closely resemble production
+          code, which is the typical subject of code review practices.
+        </p>
+        <p>
+          Existing academic literature primarily focuses on code review for production code and low-level tests, such as unit tests.
+          This highlights a gap in understanding code review practices related to GUI-based testing. Specifically, practices, guidelines, and information needs specific to GUI-based testing have not been thoroughly explored in the academic field.
         </p>
       </section>
       <section>
-        <h3>Problem Statement and Thesis Objective</h3>
+        <h3>Thesis Objective</h3>
         <p>
-          Prior studies examine code review primarily for production code and
-          low-level tests (e.g., unit tests). Practices, guidelines, and
-          information needs specific to GUI-based testing remain underexplored
-          in academic literature.
+The aim of this thesis is to develop and empirically validate actionable guidelines for reviewing code in GUI-based tests, while also highlighting the practices and challenges encountered during these reviews to enhance collaborative efforts in GUI-based testing.
         </p>
         Accordingly, this thesis aims to
         <ol>
@@ -113,15 +113,14 @@
           3) research.
         </p>
         <p>
-          We first conducted a Multivocal Literature Review (MLR) using white
-          and gray literature to identify guidelines for source and test code.
-          The synthesized guidelines are then mapped, through examples, to
-          create actionable, and applicable, guidelines for GUI-based testing
-          files.
+          To identify the state of the art in review artifacts, we conducted a Multivocal
+          Literature Review (MLR) using white and gray literature to identify
+          guidelines for source and test code. The synthesized guidelines are
+          then mapped to create actionable
+          guidelines for GUI-based testing files.
         </p>
         <p>
-          Next, we conducted a qualitative interview study with 14 software
-          testing professionals from six different companies. In this interview
+          Next, to capture aspects of code reviews beyond guidelines for artifacts, we conducted a qualitative interview study with 14 software testing professionals from six different companies. In this interview
           study, we investigate the specific practices, challenges, and
           information needs encountered when reviewing GUI-based testing files.
         </p>
@@ -129,31 +128,22 @@
           We aim to bridge this gap in knowledge on the proposed code review
           guidelines that could aid the code review process, through an
           empirical evaluation, through a confirmatory, theory-testing approach.
-          For this, we conducted a mining software repository study (MS) by
+          For this, we conducted a Mining Software Repository Study (MSR) by
           gathering code review data from 100 open-source repositories hosted on
           GitHub that discusses GUI-based test files.
         </p>
         <p>
           Finally, we conducted a questionnaire survey with 92 practitioners to
           gather their expectations and discuss the future of code reviews.
+          This survey should provide an outlook on whether perceived importance of code reviews in the future. 
         </p>
-        <figure style="text-align: center; align-content: center">
-          <img src="research-cycle.png" alt="Research Cycle" />
-          <figcaption>
-            Figure 1. The empirical research cycle involves two main approaches:
-            exploratory research, which generates theories using inductive
-            reasoning (starting with observations), and confirmatory research,
-            which tests theories through deductive reasoning (starting with a
-            theory).
-          </figcaption>
-        </figure>
       </section>
       <section>
         <h3>Results</h3>
         <p>
           Due to the absence of specifically mentioned code review guidelines
           for GUI-based testing in academic literature, we identified and mapped
-          33 guidelines across 9 categories that are applicable to GUI-based
+          33 guidelines across nine categories that are applicable to GUI-based
           testing. These guidelines primarily focus on the files under review,
           aiming to improve the quality of changes, rather than addressing the
           review process itself, such as identifying suitable reviewers for the
@@ -161,14 +151,14 @@
         </p>
         <p>
           Although participants recognize the importance of code reviews, they
-          often do not adhere to clearly defined practices when reviewing
-          GUI-based tests, instead relying on ad-hoc methods. We documented four
+          do not follow any explicit defined practices when reviewing
+          GUI-based tests, but instead relying on ad-hoc methods. We documented four
           practices commonly adopted by practitioners when reviewing GUI-based
           test files. The most frequently reported practice was running tests on
           local machines, which highlights the lack of test-specific information
           in code review tools. Additionally, six challenges were identified,
-          which included both test-specific issues—such as ensuring proper
-          validation of the system under test (SUT)—as well as more general
+          which included both test-specific issues, such as ensuring proper
+          validation of the system under test (SUT), as well as more general
           concerns, such as understandability, readability, and maintenance.
           Furthermore, practitioners expressed a need for additional information
           during reviews, including context about the SUT, coverage and
@@ -178,8 +168,8 @@
         </p>
         <p>
           In analyzing GitHub code review comments, we found empirical evidence
-          supporting 26 out of the 33 proposed guidelines from Study 1. Our
-          findings indicate that many of the guidelines derived from academic
+          supporting 26 out of the 33 proposed guidelines from Study 1.
+          Our findings indicate that many of the guidelines derived from academic
           literature are already implicitly adopted in practice. Notably, the
           most observed guideline of "Ensure proper usage of techniques for
           testing and exception handling" is particularly relevant to GUI-based
@@ -196,7 +186,7 @@
           artifacts. Specifically, GUI-based test artifacts (end-to-end testing)
           are receiving increased attention. This emphasizes that our focus on
           code reviews as a collaborative practice, both in general and
-          specifically for GUI-based testing, is viewed as a valuable practice
+          for GUI-based testing, is viewed as a valuable practice
           that will continue to grow in importance. While Large Language Models
           (LLMs) are anticipated to transform both code contributions and
           reviews, potentially moving code reviews away from being purely
@@ -208,11 +198,11 @@
         <h3>Conclusion</h3>
         <p>
           This thesis enhances the understanding of code reviews as a
-          collaborative practice, specifically in the context of GUI-based test
-          files, an area that has not been extensively studied. We proposed and
-          empirically evaluated guidelines to improve the code review process,
-          highlighting current practices and the challenges that practitioners
-          face when reviewing GUI-based tests.
+          collaborative practice in the context of GUI-based test files, an area
+          that has not been extensively studied. We proposed and empirically
+          evaluated guidelines to improve the code review process, highlighting
+          current practices and the challenges that practitioners face when
+          reviewing GUI-based tests.
         </p>
       </section>
       <section>
@@ -247,7 +237,7 @@
                   <strong>When GUI-based Testing Meets Code Reviews</strong>. In
                   revision at JSS
                 </td>
-                <td>→</td>
+                <td>TBA</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
@@ -258,7 +248,7 @@
                     Testing</strong
                   >. Submitted to JSS
                 </td>
-                <td>→</td>
+                <td>TBA</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
