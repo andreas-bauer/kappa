@@ -14,23 +14,41 @@
     <header class="container">
       <nav>
         <ul>
-          <li><strong>Andreas Bauer</strong></li>
-        </ul>
-        <ul>
           <li>
-            <a
-              href="https://www.bth.se/english/staff-landing-page/andreas-bauer"
-              >BTH</a
-            >
+            <img
+              style="border-radius: 10%"
+              src="profile.jpg"
+              alt="Andreas Bauer"
+              width="150"
+            />
           </li>
           <li>
-            <a
-              href="https://scholar.google.com/citations?user=MPS-CPQAAAAJ&hl=de&oi=sra"
-              >Google Scholar</a
-            >
-          </li>
-          <li>
-            <a href="https://orcid.org/0000-0002-2916-4020">Orchid</a>
+            <div class="row">
+              <div class="col-1">
+                <div>
+                  <strong>Andreas Bauer</strong>
+                </div>
+                <div>Blekinge Institute of Technology (BTH)</div>
+                <div>Sweden</div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.bth.se/english/staff-landing-page/andreas-bauer"
+                      >BTH</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://scholar.google.com/citations?user=MPS-CPQAAAAJ&hl=de&oi=sra"
+                      >Google Scholar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://orcid.org/0000-0002-2916-4020">Orchid</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -55,14 +73,14 @@
           Thus, the development of modern software systems requires extensive
           collaboration among professionals with diverse technical skills and
           domain knowledge to manage the increasing complexity of the developed
-          systems. 
-          One way that both industry and open-source projects facilitate collaboration is through code reviews.
-          In code reviews, people discuss changes to artifacts before they are integrated into the codebase.
-          Code reviews offer several benefits,
-          including improving code quality by identifying bugs, highlighting sub
-          par solutions, technical dept, and suggesting alternative approaches.
-          Additionally, code reviews facilitate knowledge sharing among
-          developers and testers within a team.
+          systems. One way that both industry and open-source projects
+          facilitate collaboration is through code reviews. In code reviews,
+          people discuss changes to artifacts before they are integrated into
+          the codebase. Code reviews offer several benefits, including improving
+          code quality by identifying bugs, highlighting sub par solutions,
+          technical dept, and suggesting alternative approaches. Additionally,
+          code reviews facilitate knowledge sharing among developers and testers
+          within a team.
         </p>
         <p>
           Software testing, as part of the software development process,
@@ -80,14 +98,21 @@
           code, which is the typical subject of code review practices.
         </p>
         <p>
-          Existing academic literature primarily focuses on code review for production code and low-level tests, such as unit tests.
-          This highlights a gap in understanding code review practices related to GUI-based testing. Specifically, practices, guidelines, and information needs specific to GUI-based testing have not been thoroughly explored in the academic field.
+          Existing academic literature primarily focuses on code review for
+          production code and low-level tests, such as unit tests. This
+          highlights a gap in understanding code review practices related to
+          GUI-based testing. Specifically, practices, guidelines, and
+          information needs specific to GUI-based testing have not been
+          thoroughly explored in the academic field.
         </p>
       </section>
       <section>
         <h3>Thesis Objective</h3>
         <p>
-The aim of this thesis is to develop and empirically validate actionable guidelines for reviewing code in GUI-based tests, while also highlighting the practices and challenges encountered during these reviews to enhance collaborative efforts in GUI-based testing.
+          The aim of this thesis is to develop and empirically validate
+          actionable guidelines for reviewing code in GUI-based tests, while
+          also highlighting the practices and challenges encountered during
+          these reviews to enhance collaborative efforts in GUI-based testing.
         </p>
         Accordingly, this thesis aims to
         <ol>
@@ -113,14 +138,16 @@ The aim of this thesis is to develop and empirically validate actionable guideli
           3) research.
         </p>
         <p>
-          To identify the state of the art in review artifacts, we conducted a Multivocal
-          Literature Review (MLR) using white and gray literature to identify
-          guidelines for source and test code. The synthesized guidelines are
-          then mapped to create actionable
-          guidelines for GUI-based testing files.
+          To identify the state of the art in review artifacts, we conducted a
+          Multivocal Literature Review (MLR) using white and gray literature to
+          identify guidelines for source and test code. The synthesized
+          guidelines are then mapped to create actionable guidelines for
+          GUI-based testing files.
         </p>
         <p>
-          Next, to capture aspects of code reviews beyond guidelines for artifacts, we conducted a qualitative interview study with 14 software testing professionals from six different companies. In this interview
+          Next, to capture aspects of code reviews beyond guidelines for
+          artifacts, we conducted a qualitative interview study with 14 software
+          testing professionals from six different companies. In this interview
           study, we investigate the specific practices, challenges, and
           information needs encountered when reviewing GUI-based testing files.
         </p>
@@ -134,8 +161,9 @@ The aim of this thesis is to develop and empirically validate actionable guideli
         </p>
         <p>
           Finally, we conducted a questionnaire survey with 92 practitioners to
-          gather their expectations and discuss the future of code reviews.
-          This survey should provide an outlook on whether perceived importance of code reviews in the future. 
+          gather their expectations and discuss the future of code reviews. This
+          survey should provide an outlook on whether perceived importance of
+          code reviews in the future.
         </p>
       </section>
       <section>
@@ -151,8 +179,8 @@ The aim of this thesis is to develop and empirically validate actionable guideli
         </p>
         <p>
           Although participants recognize the importance of code reviews, they
-          do not follow any explicit defined practices when reviewing
-          GUI-based tests, but instead relying on ad-hoc methods. We documented four
+          do not follow any explicit defined practices when reviewing GUI-based
+          tests, but instead relying on ad-hoc methods. We documented four
           practices commonly adopted by practitioners when reviewing GUI-based
           test files. The most frequently reported practice was running tests on
           local machines, which highlights the lack of test-specific information
@@ -168,8 +196,8 @@ The aim of this thesis is to develop and empirically validate actionable guideli
         </p>
         <p>
           In analyzing GitHub code review comments, we found empirical evidence
-          supporting 26 out of the 33 proposed guidelines from Study 1.
-          Our findings indicate that many of the guidelines derived from academic
+          supporting 26 out of the 33 proposed guidelines from Study 1. Our
+          findings indicate that many of the guidelines derived from academic
           literature are already implicitly adopted in practice. Notably, the
           most observed guideline of "Ensure proper usage of techniques for
           testing and exception handling" is particularly relevant to GUI-based
@@ -185,13 +213,13 @@ The aim of this thesis is to develop and empirically validate actionable guideli
           an increase in code review activities across a wider range of
           artifacts. Specifically, GUI-based test artifacts (end-to-end testing)
           are receiving increased attention. This emphasizes that our focus on
-          code reviews as a collaborative practice, both in general and
-          for GUI-based testing, is viewed as a valuable practice
-          that will continue to grow in importance. While Large Language Models
-          (LLMs) are anticipated to transform both code contributions and
-          reviews, potentially moving code reviews away from being purely
-          human-centered, the practice of code review remains essential in
-          software engineering and development endeavors.
+          code reviews as a collaborative practice, both in general and for
+          GUI-based testing, is viewed as a valuable practice that will continue
+          to grow in importance. While Large Language Models (LLMs) are
+          anticipated to transform both code contributions and reviews,
+          potentially moving code reviews away from being purely human-centered,
+          the practice of code review remains essential in software engineering
+          and development endeavors.
         </p>
       </section>
       <section>
@@ -274,3 +302,4 @@ The aim of this thesis is to develop and empirically validate actionable guideli
     </footer>
   </body>
 </html>
+
